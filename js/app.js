@@ -41,7 +41,7 @@ var myLogo = {
             }
         }
     }
-}
+};
 
 function digErr() {
     myLogo.Err(true);
