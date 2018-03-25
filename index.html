@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Banglaore Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body style="background: #1f1f1f;">
+    <nav class="navbar navbar">
+        <div class="container-fluid">
+            <header>
+                <div class="navbar-header">
+                    <a class="navbar-brand" style="color: pink;" href="#">Restaurants Of Bangalore</a>
+                </div><br>
+                <ul class="nav navbar-nav">
+                    <button class="btn btn-primary dropdown-toggle" style="background-color: pink; border:0px;" type="button" data-toggle="dropdown">Resturants
+  				<span class="caret"></span></button>
+                    <ul class="dropdown-menu" style="background-color: #0f0f0f;">
+                        <li><input type="search" placeholder="Choose Your Resturants" data-bind="value: searchQuery , valueUpdate: 'keyup'"></li>
+                        <ul data-bind="foreach : list">
+                            <a href="" style="text-decoration: none;">
+                                <li data-bind="text : $data , click:open"></li>
+                            </a>
+                        </ul>
+                    </ul>
+                </ul>
+            </header>
+        </div>
+    </nav>
+    <div class="error" data-bind="visible : Err , text : Err_message"></div>
+    <div class="container">
+        <div id='map'></div>
+    </div>
+    <footer>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/knockout-3.2.0.js"></script>
+        <script src="js/app.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZzWpP46Td108jixXSKqE3iuUoOs7IhRI&callback=myDig" onerror="digErr()">
+        </script>
+    </footer>
+</body>
+
+</html>
